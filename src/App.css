@@ -10324,6 +10324,11 @@ label {
   width: 100%;
 }
 
+.photoModalBody {
+  width: 100%;
+  padding: 20px;
+}
+
 .photoModalImg {
   width: 100%;
   max-width: 1000px;

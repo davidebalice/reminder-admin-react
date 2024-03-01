@@ -64,6 +64,31 @@ const AddReminder = () => {
     });
   };
 
+  /*
+    const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        `${API_URLS.reminderApi}/api/reminders/`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
+      setReminders(response.data.reminders);
+    } catch (error) {
+      console.log("error:" + error);
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+  */
+
   const submitForm = (e) => {
     e.preventDefault();
     if (demo) {

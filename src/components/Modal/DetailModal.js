@@ -1,9 +1,6 @@
-import { useState, useContext } from "react";
 import { Modal, Button } from "react-bootstrap";
-import { Context } from "../../context/UserContext";
 
 const DetailModal = ({ show, modalData, closeDetailModal }) => {
-  const { userData, demo } = useContext(Context);
   return (
     <>
       <Modal show={show} className="photoModal" size="lg" centered>
@@ -13,7 +10,11 @@ const DetailModal = ({ show, modalData, closeDetailModal }) => {
             Close
           </Button>
         </Modal.Header>
-        <Modal.Body className="photoModalHeader">{modalData.text}</Modal.Body>
+        <Modal.Body className="photoModalBody">
+          <b>{modalData.text}</b>
+          <br />
+          {modalData.text2}
+        </Modal.Body>
       </Modal>
     </>
   );

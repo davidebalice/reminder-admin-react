@@ -30,14 +30,15 @@ const Reminders = () => {
   const [modalData, setModalData] = useState({
     show: false,
     text: "",
+    text2: "",
   });
 
-  const openDetailModal = (text) => {
-    setModalData({ show: true, text });
+  const openDetailModal = (text,text2) => {
+    setModalData({ show: true, text,text2 });
   };
 
   const closeDetailModal = () => {
-    setModalData(false, null);
+    setModalData(false, null, null);
   };
 
   useEffect(() => {
@@ -172,7 +173,7 @@ const Reminders = () => {
                                 {item._doc.completed ? "Completed" : "Open"}
                               </td>
                               <td>{item._doc.category_id.name}</td>
-                              <td>{item._doc.lastEmailSend}</td>
+                              <td>{item.formattedLastEmailSend}</td>
                               <td
                                 style={{
                                   display: "flex",
@@ -192,7 +193,10 @@ const Reminders = () => {
                                     <button
                                       className=" btn btn-primary btn-sm ms-1 btnTask"
                                       onClick={() =>
-                                        openDetailModal("text aVSDFBF")
+                                        openDetailModal(
+                                          item._doc.title,
+                                          item._doc.description
+                                        )
                                       }
                                     >
                                       <FontAwesomeIcon
