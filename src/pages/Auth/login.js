@@ -59,7 +59,7 @@ const Login = () => {
   }
   return (
     <>
-      <div className="container">
+      <div className="loginContainer">
         <div
           className="row justify-content-center align-items-center jumbotron"
           style={{ height: "65vh" }}

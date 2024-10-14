@@ -10529,6 +10529,17 @@ label {
   color: #fff;
   font-size: 20px;
 }
+
+.loginContainer {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-image: url("./assets/img/bg.jpg");
+  background-size: cover;
+  background-position: right bottom;
+}
 /*# sourceMappingURL=style.css.map */
 
 /* end  dashboard css */

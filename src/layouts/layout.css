@@ -49,7 +49,7 @@ a {
   display: flex;
   align-items: center;
   width: 110%;
-  margin-left:-32px;
+  margin-left: -32px;
   justify-content: space-between;
   padding: 0 1rem;
   background-color: var(--white-color);
@@ -69,7 +69,7 @@ a {
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
-  border:2px solid #ddd;
+  border: 2px solid #ddd;
 }
 .header_img img {
   width: 40px;
@@ -224,4 +224,21 @@ a {
 
 .layoutContainer {
   height: calc(100vh - 50px);
+}
+
+.l-navbar {
+  background-image: url("../assets/img/bgSide.jpg");
+  background-size: cover;
+}
+
+.nav_name {
+  color: #fff !important;
+}
+
+.nav_name:hover {
+  color: #f1f1f1 !important;
+}
+
+.nav_link svg {
+  color: #fff !important;
 }

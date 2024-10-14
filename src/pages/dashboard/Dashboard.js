@@ -1,25 +1,14 @@
-import { useState, useEffect, useContext } from "react";
-import { Context } from "../../context/UserContext"; 
 import axios from "axios";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDatabase,
-  faListCheck,
-  faEyeLowVision,
-  faBuildingColumns,
-  faTableList,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
-import CountUp from "react-countup";
-import Table from "react-bootstrap/Table";
+import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import "../../App.css";
 import cover from "../../assets/img/cover.jpg";
-import react_node from "../../assets/img/react_node.png";
-import react from "../../assets/img/react.jpg";
-import node from "../../assets/img/node.jpg";
 import github from "../../assets/img/github.png";
 import db from "../../assets/img/logo.png";
+import node from "../../assets/img/node.jpg";
+import react from "../../assets/img/react.jpg";
+import react_node from "../../assets/img/react_node.png";
+import { Context } from "../../context/UserContext";
 
 export default function Hero() {
   const token = localStorage.getItem("authToken");
@@ -80,11 +69,13 @@ export default function Hero() {
                   <div className="row">
                     <div className="dashboardCol col-md-3 col-12">
                       <div className="dashboardDescription">
-                        <b className="dashboardText1">Task manager</b>
+                        <b className="dashboardText1">Reminder app</b>
                         <p className="dashboardText2">
-                          Task manager developer in Node and React, with basic
-                          functions: Projects, tasks, activities, comments,
-                          file, users, clients.
+                          Reminder developer in Node and React.
+                          <br />
+                          Set your reminders deadline, receive reminder emails
+                          30, 15, 7, 3, 2 and 1 day before your set expiration
+                          date.
                         </p>
 
                         <img
@@ -130,12 +121,12 @@ export default function Hero() {
                         </div>
                         <p className="githubTitle">Frontend</p>
                         <a
-                          href="https://github.com/davidebalice/task-manager-frontend-react"
+                          href="https://github.com/davidebalice/reminder-admin-react"
                           target="_blank"
                           className="githubLink"
                           rel="noreferrer"
                         >
-                          github.com/davidebalice/task-manager-frontend-react
+                          github.com/davidebalice/reminder-admin-react
                         </a>
                       </div>
                     </div>
@@ -156,12 +147,12 @@ export default function Hero() {
                         </div>
                         <p className="githubTitle">Backend</p>
                         <a
-                          href="https://github.com/davidebalice/node-task-manager-api"
+                          href="https://github.com/davidebalice/node-reminder"
                           target="_blank"
                           className="githubLink"
                           rel="noreferrer"
                         >
-                          github.com/davidebalice/node-task-manager-api
+                          github.com/davidebalice/node-reminder
                         </a>
                       </div>
                     </div>
@@ -171,10 +162,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-       
-
-        
       </div>
     </>
   );
