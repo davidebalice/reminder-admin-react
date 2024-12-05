@@ -1,9 +1,10 @@
-import React, { useState, useContext } from "react";
-import { Context } from "../../context/UserContext";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import ReCAPTCHA from "react-google-recaptcha";
+import logo from "../../assets/img/logo.png";
+import logoReact from "../../assets/img/react.jpg";
+import { Context } from "../../context/UserContext";
 
 const Login = () => {
   const { login } = useContext(Context);
@@ -64,10 +65,14 @@ const Login = () => {
           className="row justify-content-center align-items-center jumbotron"
           style={{ height: "65vh" }}
         >
-          <div className="col-md-5">
+          <div className="col-md-5 loginCard">
             <div className="card">
+              <div className="loginLogoContainer">
+                <img src={logo} alt="db logo" />
+                <img src={logoReact} alt="react logo" />
+              </div>
               <div className="card-header border-bottom text-center">
-                <h2>Login</h2>
+                <h3>Reminder App</h3>
               </div>
               <div className="card-body">
                 <input
@@ -86,20 +91,26 @@ const Login = () => {
                   value={formData.password}
                   onChange={handleInput}
                 />
-                <ReCAPTCHA
-                  sitekey={process.env.REACT_APP_SITE_KEY}
-                  onChange={onChange}
-                />
                 <button
                   type="sumit"
                   onClick={loginHandle}
-                  className="btn btn-primary mt-2"
+                  className="btn btn-primary mt-2 w-100"
                 >
                   Login
                 </button>
-                <Link to="/forgot-password">
+                {/*
+                 <Link to="/forgot-password">
                   <p>Forgot Password</p>
                 </Link>
+                */}
+
+                <div className="loginDemoData">
+                  <b>Demo data:</b>
+                  <br />
+                  mario@rossi.it
+                  <br />
+                  12345678
+                </div>
               </div>
             </div>
           </div>

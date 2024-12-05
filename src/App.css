@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #24a50b;
+  --secondary-color: #3cc422;
+  --text-color: #fff;
+}
+
 .App {
   text-align: center;
 }
@@ -299,12 +305,12 @@ div#global-loader,
 }
 
 .text-primary {
-  color: #18b0e9 !important;
+  color: var(--primary-color) !important;
 }
 
 .bg-primary {
-  background: #18b0e9 !important;
-  background-color: #18b0e9 !important;
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }
 
 .bg-red {
@@ -1405,15 +1411,15 @@ div#global-loader,
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #17b0e9 !important;
-  border-color: #17b0e9 !important;
+  color: var(--text-color);
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #1b98c7 !important;
-  border-color: #1b98c7 !important;
+  color: var(--text-color);
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
 }
 
 .avatar {
@@ -4040,10 +4046,11 @@ table.dataTable > thead .sorting_desc_disabled:before {
   border: 1px solid #ccc;
   color: #fff;
   font-weight: bold;
+  margin-top:40px
 }
 
 .paginationItemActive {
-  background-color: #18b0e9;
+  background-color: var(--secondary-color) !important;
 }
 
 .paginationItem:hover {
@@ -7606,6 +7613,7 @@ span.select2-container.select2-container--default.select2-container--open {
 
 .swal2-actions .swal2-confirm {
   margin-right: 10px;
+  background: var(--primary-color) !important;
 }
 
 .wordset ul li {
@@ -9769,8 +9777,8 @@ span.select2-container.select2-container--default.select2-container--open {
 .addButton {
   display: flex;
   flex-direction: row;
-  background: #24a50b;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   gap: 12px;
   align-items: center;
   width: fit-content;
@@ -9787,7 +9795,7 @@ span.select2-container.select2-container--default.select2-container--open {
 }
 
 .addButton:hover {
-  background: #3bb722;
+  background-color: var(--secondary-color);
 }
 
 .addButtonIcon {
@@ -9797,8 +9805,8 @@ span.select2-container.select2-container--default.select2-container--open {
 .addButtonSm {
   display: flex;
   flex-direction: row;
-  background: #24a50b !important;
-  border-color: #24a50b !important;
+  background: var(--primary-color) !important;
+  border-color: var(--text-color) !important;
   color: #fff;
   gap: 12px;
   align-items: center;
@@ -9826,8 +9834,8 @@ span.select2-container.select2-container--default.select2-container--open {
 .backButton {
   display: flex;
   flex-direction: row;
-  background: #18b0e9 !important;
-  border-color: #18b0e9 !important;
+  border-color: var(--primary-color) !important;
+  background: var(--primary-color) !important;
   color: #fff;
   gap: 12px;
   align-items: center;
@@ -10183,6 +10191,8 @@ label {
   display: flex;
   align-items: center;
   height: 32px;
+  justify-content: center;
+  width:55px
 }
 
 .taskButtonDisabled {
@@ -10488,12 +10498,14 @@ label {
 }
 
 .modalHeader {
-  background: #222;
+  background-color: var(--primary-color) !important;
+  padding:5px !important
 }
 
 .modalClose {
   color: #fff;
-  font-size: 25px;
+  font-size: 20px;
+  margin:4px;
   cursor: pointer;
 }
 
@@ -10540,6 +10552,34 @@ label {
   background-size: cover;
   background-position: right bottom;
 }
+
+.loginCard{
+  max-width: 400px;
+}
+
+.loginLogoContainer{
+  width:100%;
+  display: flex;
+  padding:12px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #ddd
+}
+
+.loginLogoContainer img:first-child{
+  width:130px;
+}
+
+.loginLogoContainer img:last-child{
+  width:70px;
+}
+
+.loginDemoData{
+  padding: 14px;
+  background-color: #f1f1f1;
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 /* end  dashboard css */
