@@ -21,7 +21,6 @@ const Login = () => {
         password: formData.password,
       })
       .then((response) => {
-        console.log(response.data);
 
         if (response.data.status === "success") {
           Swal.fire("Login success", "", "success");
@@ -29,8 +28,6 @@ const Login = () => {
           const token = response.data.token;
           localStorage.setItem("authToken", token);
 
-          console.log("response.data.user");
-          console.log(response.data.user);
           login(response.data.user);
 
           navigate("/");
@@ -40,7 +37,7 @@ const Login = () => {
         }
       })
       .catch((error) => {
-        console.error("Errore durante il login:", error);
+        console.error("Error login:", error);
         Swal.fire("Login failed", "Data incorrect", "error");
         localStorage.removeItem("authToken");
       });
@@ -55,9 +52,7 @@ const Login = () => {
     });
   };
 
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+
   return (
     <>
       <div className="loginContainer">

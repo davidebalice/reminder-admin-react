@@ -37,13 +37,11 @@ function App() {
   }, [pathname, userIsAuthenticated]);
 
   return (
-    <div id="">
       <UserProvider>
         {layout && <Layouts />}
         {auth ? <AdminRoutes /> : <NotAuth />}
         {footer && <Footer />}
       </UserProvider>
-    </div>
   );
 }
 

@@ -49,11 +49,6 @@ const EditCategory = () => {
         },
       })
       .then((response) => {
-        console.log("response.data.category");
-        console.log(response.data.category);
-        console.log(response.data.category[0].name);
-        //console.log(response.data.category.data);
-
         setFormData(response.data.category[0]);
       })
       .catch((error) => {
@@ -85,8 +80,6 @@ const EditCategory = () => {
           }
         )
         .then((response) => {
-          console.log("response.data");
-          console.log(response.data);
           setResponseData(response.data.message);
 
           Swal.fire({

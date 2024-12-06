@@ -97,8 +97,6 @@ const Categories = () => {
               }
             )
             .then((response) => {
-              console.log("response.data.categories");
-              console.log(response.data.categories);
               if (response.data.status === "success") {
                 setReload((prevCount) => prevCount + 1);
               }

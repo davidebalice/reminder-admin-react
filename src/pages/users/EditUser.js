@@ -95,8 +95,6 @@ const EditUser = () => {
           }
         )
         .then((response) => {
-          console.log("response.data");
-          console.log(response.data);
           setResponseData(response.data.message);
 
           Swal.fire({
@@ -142,8 +140,6 @@ const EditUser = () => {
           }
         )
         .then((response) => {
-          console.log("response.data");
-          console.log(response.data);
           setResponseData(response.data.message);
           if (response.data.message === "success") {
             Swal.fire({

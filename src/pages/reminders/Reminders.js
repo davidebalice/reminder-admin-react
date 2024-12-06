@@ -51,9 +51,6 @@ const Reminders = () => {
         },
       })
       .then((response) => {
-        console.log("response.data.reminders");
-        console.log(response.data.reminders);
-
         setLoading(false);
         setData(response.data.reminders);
         setClient(response.data.client);

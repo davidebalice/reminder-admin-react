@@ -1,14 +1,4 @@
 function isAllowed(role, id, members, ownerId) {
-  console.log("allow");
-  console.log("role");
-  console.log(role);
-  console.log("id");
-  console.log(id);
-  console.log("members");
-  console.log(members);
-  console.log("ownerId");
-  console.log(ownerId);
-
   if (role === "admin") {
     return true;
   } else {

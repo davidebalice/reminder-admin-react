@@ -1,5 +1,5 @@
-import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import React, { createContext, useEffect, useState } from "react";
 
 export const Context = createContext();
 
@@ -17,7 +17,6 @@ export function UserProvider({ children }) {
   };
 
   useEffect(() => {
-    console.log(token);
     axios
       .post(
         process.env.REACT_APP_API_BASE_URL + "/api/get/user",
@@ -31,14 +30,13 @@ export function UserProvider({ children }) {
         }
       )
       .then((response) => {
-        console.log(response.data.user);
         setUserData(response.data.user);
         setDemo(response.data.demo === "false" ? false : true);
       })
       .catch((error) => {
         console.error("Error calling api:", error);
       });
-  }, []);
+  }, [token]);
 
   return (
     <Context.Provider
@@ -54,47 +52,3 @@ export function UserProvider({ children }) {
     </Context.Provider>
   );
 }
-
-/*
-
-
-
-
-
-import React, { createContext, useState } from "react";
-
-export const Context = createContext();
-
-export function Provider({ children }) {
-  const [debug, setDebug] = useState(true);
-  const [lang, setLang] = useState("en");
-  const [firstRoute, setFirstRoute] = useState(true);
-  const [rendered, setRendered] = useState(false);
-
-  const linkedin = "https://www.linkedin.com";
-  const github = "https://github.com/davidebalice";
-
-  if (debug) {
-    console.log(lang);
-  }
-
-  return (
-    <Context.Provider
-      value={{
-        debug,
-        setDebug,
-        lang,
-        setLang,
-        rendered,
-        setRendered,
-        firstRoute,
-        setFirstRoute,
-        linkedin,
-        github,
-      }}
-    >
-      {children}
-    </Context.Provider>
-  );
-}
-*/

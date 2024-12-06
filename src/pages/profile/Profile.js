@@ -68,7 +68,6 @@ const Profile = () => {
       .then((response) => {
         setFormData(response.data.user);
         setUserData(response.data.user);
-        console.log(response.data.user);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -99,8 +98,6 @@ const Profile = () => {
           }
         )
         .then((response) => {
-          console.log("response.data");
-          console.log(response.data);
           setUserData(response.data.user);
           Swal.fire({
             title: "Data updated",

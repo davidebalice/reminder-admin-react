@@ -53,7 +53,6 @@ const PhotoUser = () => {
         },
       })
       .then((response) => {
-        console.log(response.data.user);
         setFormData({
           ...response.data.user,
         });

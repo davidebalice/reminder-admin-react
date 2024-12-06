@@ -99,8 +99,6 @@ const EditReminder = () => {
           }
         )
         .then((response) => {
-          console.log("response.data");
-          console.log(response.data);
           setResponseData(response.data.message);
 
           Swal.fire({

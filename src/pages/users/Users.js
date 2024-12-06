@@ -95,8 +95,6 @@ const Users = () => {
               }
             )
             .then((response) => {
-              console.log("response.data.user");
-              console.log(response.data.user);
               if (response.data.status === "success") {
                 setReload((prevCount) => prevCount + 1);
               }

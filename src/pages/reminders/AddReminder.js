@@ -47,9 +47,7 @@ const AddReminder = () => {
         },
       })
       .then((response) => {
-        console.log(response.data);
         setCategoriesData(response.data.categories);
-        console.log(response.data.categories);
       })
       .catch((error) => {
         console.error("Error during api call:", error);
